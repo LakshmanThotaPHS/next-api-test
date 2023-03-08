@@ -13,6 +13,7 @@ export default function Home() {
     </Head>
     <div className='content'>
        <h1>HOME</h1>
+       <p>This site lists all the users</p>
     </div>
     </>
   )
