@@ -43,7 +43,7 @@ export async function handler(req, res) {
             res.status(500).json({ error: 'Internal server error' });
         }
       }else{
-        res.status(500).json({ error: 'Invalid body' });
+        res.status(500).json({ error: 'Invalid body; '+ JSON.stringify(formData) });
       }
   } else {
     // Return an error for unsupported HTTP methods
