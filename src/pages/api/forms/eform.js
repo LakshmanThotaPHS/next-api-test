@@ -5,11 +5,11 @@ export async function handler(req, res) {
     // Parse the incoming JSON data from Formstack webhook
       const formData = req.body;
       
-      if(formData.email_address && formData.name && formData.degreetitle){
+      if(formData.email_address && formData.practice_name && formData.degreetitle){
         const mailchimpPostData = {
             "email_address": formData.email_address,
             "merge_fields": {
-              "FNAME": formData.name,
+              "FNAME": formData.practice_name,
               "LNAME": formData.degreetitle
             },
             "status": "subscribed"
