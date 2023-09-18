@@ -35,7 +35,7 @@ export async function handler(req, res) {
             } else {
                 // The request to the target API failed
                 console.error('Error sending data to Target API:', response.status);
-                res.status(500).json({ error: 'Error sending data to target API' });
+                res.status(500).json({ error: response.body+ 'Error sending data to target API'+JSON.stringify(mailchimpPostData) });
             }
         } catch (error) {
             // Handle any exceptions that occur during the request
