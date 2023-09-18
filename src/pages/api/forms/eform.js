@@ -21,7 +21,7 @@ export async function handler(req, res) {
                 method: 'POST',
                 headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer 4c60713f9427e485382ee5736cecb95f-us21'
+                'Authorization': `Bearer ${process.env.NEXT_PUBLIC_MAILCHIMP_KEY}`
                 },
                 body: JSON.stringify(mailchimpPostData), // Convert the form data to JSON
             });
